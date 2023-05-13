@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOPBank", "Bank Project\OOPBank.csproj", "{51670772-3D69-461E-995C-9073BE588091}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOPBank.Test", "OOPBank.Test\OOPBank.Test.csproj", "{8D10B1C9-BE06-41CC-84E7-1A4204F62140}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51670772-3D69-461E-995C-9073BE588091}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51670772-3D69-461E-995C-9073BE588091}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51670772-3D69-461E-995C-9073BE588091}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51670772-3D69-461E-995C-9073BE588091}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D10B1C9-BE06-41CC-84E7-1A4204F62140}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D10B1C9-BE06-41CC-84E7-1A4204F62140}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D10B1C9-BE06-41CC-84E7-1A4204F62140}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D10B1C9-BE06-41CC-84E7-1A4204F62140}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C288A054-0AA7-4FC6-AA7D-6DAE98A23119}
+	EndGlobalSection
+EndGlobal
