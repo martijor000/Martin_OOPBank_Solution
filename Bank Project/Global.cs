@@ -6,21 +6,26 @@ using System.Threading.Tasks;
 
 namespace Bank_Project
 {
-    public static class Global
+    internal static class Global
     {
-        private static double checkingBalance = 2000;
-        private static double savingsBalance = 3000;
+        private static decimal checkingBalance = 2000M;
+        private static decimal savingsBalance = 3000M;
+        private static IVault vault = new Vault();
 
-        public static double CheckingBalance
+        public static decimal CheckingBalance
         {
             get { return checkingBalance; }
         }
 
-        public static double SavingsBalance
+        public static decimal SavingsBalance
         {
             get { return savingsBalance; }
         }
 
+        public static IVault GetVault
+        {
+            get { return vault; }
+        }
 
     }
 }

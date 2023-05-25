@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Bank_Project
 {
-    public interface IAccount
+    internal class TransactionType
     {
-        decimal Balance { get; }
-        void Deposit(decimal amount);
-        void Withdraw(decimal amount);
+        internal enum Type
+        {
+            Deposit,
+            Withdrawal
+        }
     }
 }

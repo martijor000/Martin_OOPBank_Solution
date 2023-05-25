@@ -6,18 +6,14 @@ using System.Threading.Tasks;
 
 namespace Bank_Project
 {
-    internal class Checking : IAccount
+    internal class CheckingAccount : Account
     {
-        public decimal Balance => throw new NotImplementedException();
-
-        public void Deposit(decimal amount)
+        public override void Withdraw(decimal amount)
         {
-            throw new NotImplementedException();
-        }
+            if (balance - amount < 0)
+                throw new InvalidOperationException("Insufficient funds.");
 
-        public void Withdraw(decimal amount)
-        {
-            throw new NotImplementedException();
+            balance -= amount;
         }
     }
 }

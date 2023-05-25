@@ -8,5 +8,8 @@ namespace Bank_Project
 {
     internal interface IVault
     {
+        void AddCash(decimal amount);
+        bool RemoveCash(decimal amount);
+        decimal CheckBalance();
     }
 }
