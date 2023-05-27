@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bank_Project
 {
-    internal class Customer
+    public class Customer
     {
         public string Name { get; private set; }
 

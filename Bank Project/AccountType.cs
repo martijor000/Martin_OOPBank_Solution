@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Bank_Project
 {
-    internal class AccountType
+    public class AccountType
     {
-        internal enum Type
+        public enum Type
         {
             Savings,
             Checking

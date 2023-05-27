@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bank_Project
 {
-    internal class Bank
+    public class Bank
     {
         private Dictionary<Customer, Dictionary<AccountType.Type, decimal>> customerAccounts;
 
@@ -47,6 +47,7 @@ namespace Bank_Project
 
         public bool WithdrawFromAccount(string customerName, AccountType.Type accountType, decimal amount)
         {
+            AccountType.Type otherAccountType = GetOtherAccountType(accountType);
             Customer customer = customerAccounts.Keys.FirstOrDefault(c => c.Name == customerName);
 
             if (customer != null && customerAccounts.TryGetValue(customer, out Dictionary<AccountType.Type, decimal> accounts))
@@ -55,7 +56,7 @@ namespace Bank_Project
                 {
                     decimal currentBalance = accounts[accountType];
 
-                    if (accountType == AccountType.Type.Savings && currentBalance - amount < 10)
+                    if (accountType == AccountType.Type.Savings && currentBalance + accounts[otherAccountType] - amount < 10)
                     {
                         Console.WriteLine("Withdrawal not allowed. Minimum balance of $10 must be maintained in the Savings account.");
                         return false;
@@ -68,7 +69,6 @@ namespace Bank_Project
                     }
                     else if (CanOverdraft(customer, accountType, amount))
                     {
-                        AccountType.Type otherAccountType = GetOtherAccountType(accountType);
                         decimal overdraftAmount = amount - currentBalance;
 
                         if (accounts[otherAccountType] >= overdraftAmount)
